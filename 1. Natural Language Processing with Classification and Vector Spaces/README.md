@@ -1,5 +1,4 @@
-# Course 1: Natural Language Processing with Classification and Vector
-Spaces
+# Course 1: Natural Language Processing with Classification and Vector Spaces
 
 * [Course 1: Natural Language Processing with Classification and Vector Spaces](#course-1:-natural-language-processing-with-classification-and-vector-spaces)
    * [Week 2: Naive Bayes](#week-2:-naive-bayes)
