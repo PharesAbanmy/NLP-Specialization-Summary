@@ -87,4 +87,4 @@ add log to fix it.
     - A simple hash function: Hash Value = vector % number of buckets.
     - ![](images/09.png)
 - Locality Sensitive Hashing: Separate the space using hyperplanes.
-    - ![](images/010.png)
+    - ![](images/10.png)
