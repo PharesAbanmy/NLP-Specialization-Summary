@@ -77,8 +77,9 @@
 - Given your transition and emission probabilities, we first populates and then use the auxiliary matrices C and D.
 - ![](images/05.png)
 - **Matrix C** holds the intermediate optimal <ins>probabilities</ins>.
+	- ![](images/055.png)
 - **Matrix D** holds the <ins>indices</ins> of the visited states (tags).
-- ![](images/06.png)
+	- ![](images/06.png)
 
 
 ## Word Embeddings
