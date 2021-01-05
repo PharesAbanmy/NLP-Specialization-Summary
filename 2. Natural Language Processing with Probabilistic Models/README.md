@@ -75,11 +75,11 @@
 - A graph algorithm that finds the sequence of hidden states or parts of speech tags that have the highest probability for a sequence.
 - ![](images/04.png)
 - Given your transition and emission probabilities, we first populates and then use the auxiliary matrices C and D.
-- ![](images/05.png)
 - **Matrix C** holds the intermediate optimal <ins>probabilities</ins>.
 	- ![](images/055.png)
 - **Matrix D** holds the <ins>indices</ins> of the visited states (tags).
-	- ![](images/06.png)
+	- ![](images/05.png)
+- ![](images/06.png)
 
 
 ## Word Embeddings
