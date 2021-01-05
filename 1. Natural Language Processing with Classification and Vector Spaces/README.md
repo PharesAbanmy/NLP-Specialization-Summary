@@ -20,7 +20,7 @@
 - P(B | A): Probability of B, given A.
 - P(A | B): Given an element from set A, the probability that it belongs to set B.
 - Example: 
-    - ![](Images/01.png)
+    - ![](images/01.png)
 
 ### Bayes’ Rule
 - P(X | Y) = P(Y | X) * P(X) / P(Y)
@@ -31,8 +31,8 @@ this tweet is positive?
 - A/ P(X | Y) = 0.25 * 0.4/0.13
 
 ### Naive Bayes Example
-- ![](Images/02.png)
-- ![](Images/03.png)
+- ![](images/02.png)
+- ![](images/03.png)
 - Laplacian Smoothing: Adding 1 to the numerator to fix the 0 problem.
 - Log Likelihood: The product of many small numbers can cause numerical underflow problem, so we
 add log to fix it.
@@ -54,15 +54,15 @@ add log to fix it.
     
 ### Euclidean Distance
 - The length of the straight line that's connects two vectors.
-- ![](Images/04.png)
+- ![](images/04.png)
 
 ### Cosine similarity
 - Applying cos function on the angle between 2 vectors.
 - Previous definitions:
     - vector norm(||v||): The square root of the sum of its elements squared.
     - Dot product(v.w): The sum of the products between their elements in each dimension of the vector space.
-- ![](Images/05.png)
-- ![](Images/06.png)
+- ![](images/05.png)
+- ![](images/06.png)
 
 ### PCA(Principal Component Analysis)
 - An algorithm used for dimensionality reduction by finding uncorrelated features by 3 steps.
@@ -77,7 +77,7 @@ add log to fix it.
 ### Transforming word vectors
 - Document to vector: Documents can be represented as vectors with the same dimension as words by adding the word vectors in the documents.
 - Transforming word vectors: In order to translate from a language a word vectors are X to another language a word vectors are Y we want to build a matrix R using gradient descent.
-    - ![](Images/08.png)
+    - ![](images/08.png)
 
 ### K-nearest neighbors
 - To translate from X to Y using the R matrix, you may find that XR doesn't correspond toany specific vector in Y.
@@ -85,6 +85,6 @@ add log to fix it.
 - Thus searching in the whole space can be slow, using a hash tables can minimize yoursearch space.
 - Hash tables and hash functions
     - A simple hash function: Hash Value = vector % number of buckets.
-    - ![](Images/09.png)
+    - ![](images/09.png)
 - Locality Sensitive Hashing: Separate the space using hyperplanes.
-    - ![](Images/010.png)
+    - ![](images/010.png)
