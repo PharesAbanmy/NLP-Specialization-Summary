@@ -89,5 +89,4 @@ add log to fix it.
 - Locality Sensitive Hashing: Separate the space using hyperplanes.
     - ![](images/10.png)
     
-# My Certificate
-- ![](images/CERTIFICATE1.jpeg)
+[Certificate](https://www.coursera.org/account/accomplishments/certificate/SCDAXSU2NA7B)
