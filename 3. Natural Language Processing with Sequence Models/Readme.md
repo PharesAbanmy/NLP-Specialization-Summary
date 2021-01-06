@@ -30,12 +30,12 @@
 ### Recurrent Neural Networks (RNNs)
 - Recurrent Neural Network is a generalization of feed-forward neural network that has an internal memory.
 - A Vanilla RNN
-	  + ![](images/01.png)
-	  + ![](images/02.png)
+	+ ![](images/01.png)
+	+ ![](images/02.png)
 - **RNN Types**
-    + One to One
-    + One to Many
-    + Many to Many
+	+ One to One
+    	+ One to Many
+    	+ Many to Many
     
 ### Gated Recurrent Units
 - Relevance ‘r’ and update ‘ r ’ and update ‘ and update ‘r’ and update ‘ u ’ and update ‘ gates to remember important prior information.
