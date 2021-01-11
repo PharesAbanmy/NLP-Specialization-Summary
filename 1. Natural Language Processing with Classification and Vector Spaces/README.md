@@ -1,16 +1,18 @@
 # Course 1: Natural Language Processing with Classification and Vector Spaces
+This is the first course of the Natural Language Processing specialization at [Coursera](https://www.coursera.org/programs/educational-flag-learning-program-0tkxi?currentTab=MY_COURSES&productId=_U5cASTxEemuhAoKFebZeA&productType=s12n&showMiniModal=true) which is moderated by [DeepLearning.ai](http://deeplearning.ai/).
 
-* [Course 1: Natural Language Processing with Classification and Vector Spaces](#course-1:-natural-language-processing-with-classification-and-vector-spaces)
-   * [Week 2: Naive Bayes](#week-2:-naive-bayes)
+## Table of contents
+* [Course 1: Natural Language Processing with Classification and Vector Spaces](#course-1-natural-language-processing-with-classification-and-vector-spaces)
+   * [Week 2: Naive Bayes](#week-2-naive-bayes)
       * [Conditional probabilities](#conditional-probabilities)
       * [Bayes’ Rule](#bayes’-rule)
       * [Naive Bayes Example](#naive-bayes-example)
       * [Applications of Naive Bayes](#applications-of-naive-bayes)
-   * [Week 3: Vector Space Models](#week-3:-vector-space-models)
+   * [Week 3: Vector Space Models](#week-3-vector-space-models)
       * [Euclidean Distance](#euclidean-distance)
       * [Cosine similarity](#cosine-similarity)
       * [PCA(Principal Component Analysis)](#pca(principal-component-analysis))
-   * [Week 4: Machine Translation](#week-4:-machine-translation)
+   * [Week 4: Machine Translation](#week-4-machine-translation)
       * [Transforming word vectors](#transforming-word-vectors)
       * [K-nearest neighbors](#k-nearest-neighbors)
 
