@@ -8,7 +8,7 @@
     * [Alignment](#Alignment)
     * [Attention](#Attention)
       * [Intuition](#Intuition)
-    * [Attention: Examples](#Attention:-Examples)
+    * [Attention: Examples](#Attention--Examples)
       * [seq2seq with bidirectional encoder + attention](#seq2seq-with-bidirectional-encoder-+-attention)
         * [Intuition](#Intuition)
       * [seq2seq with 2-layer stacked encoder + attention](#seq2seq-with-2-layer-stacked-encoder-+-attention)
