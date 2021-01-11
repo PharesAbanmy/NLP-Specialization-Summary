@@ -1,6 +1,6 @@
 # Course 3: Natural Language Processing with Sequence Models
 
-* [# Course 3: Natural Language Processing with Sequence Models](#course-3:-natural-language-processing-with-sequence-models)
+* [Course 3: Natural Language Processing with Sequence Models](#course-3:-natural-language-processing-with-sequence-models)
    
    * [Week 2: Traditional Language models](#week-2:-traditional-language-models)
       * [Recurrent Neural Networks](#recurrent-neural-networks)
