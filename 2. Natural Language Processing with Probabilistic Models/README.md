@@ -1,19 +1,21 @@
 # Course 1: Course 2: Natural Language Processing with Probabilistic Model
+This is the second course of the Natural Language Processing specialization at [Coursera](https://www.coursera.org/programs/educational-flag-learning-program-0tkxi?currentTab=MY_COURSES&productId=_U5cASTxEemuhAoKFebZeA&productType=s12n&showMiniModal=true) which is moderated by [DeepLearning.ai](http://deeplearning.ai/).
 
-* [Course 2: Natural Language Processing with Probabilistic Model](#course-2:-natural-language-processing-with-probabilistic-model)
+## Table of contents
+* [Course 2: Natural Language Processing with Probabilistic Model](#course-2-natural-language-processing-with-probabilistic-model)
    
-   * [Week 1: Auto-correct and Dynamic Programming](#week-1:-auto-correct-and-dynamic-programming)
+   * [Week 1: Auto-correct and Dynamic Programming](#week-1-auto-correct-and-dynamic-programming)
       * [auto-correct](#auto-correct)
       * [Minimum edit distance](#minimum-edit-distance)
       * [Applications](#applications)
    
-   * [Week 2: Part of Speech Tagging and Hidden Markov Models](#week-2:-part-of-speech-tagging-and-hidden-markov-models)
+   * [Week 2: Part of Speech Tagging and Hidden Markov Models](#week-2-part-of-speech-tagging-and-hidden-markov-models)
       * [Part of Speech Tagging](#part-of-speech-tagging)
           * [Applications](#applications)
       * [Markov Chains](#markov-chains)
       * [The Viterbi Algorithm)](#the-viterbi-algorithm)
    
-   * [Week 3: Autocomplete and Language Models](#week-3:-autocomplete-and-language-models)
+   * [Week 3: Autocomplete and Language Models](#week-3-autocomplete-and-language-models)
       * [N-Grams](#n-grams)
       * [N-grams and Probabilities](#n-grams-and-probabilities)
       * [Sequence Probabilities](#sequence-probabilities)
@@ -23,7 +25,7 @@
       * [Out of Vocabulary Words](#out-of-vocabulary-words)
       * [Smoothing](#smoothing)
 
-   * [Week 4: Word Embeddings](#week-4:-word-embeddings)
+   * [Week 4: Word Embeddings](#week-4-word-embeddings)
       * [Basic Word Representations](#basic-word-representations )
       * [Basic word embedding methods](#basic-word-embedding-methods)
       * [Advanced word embedding methods](#advanced-word-embedding-methods)
