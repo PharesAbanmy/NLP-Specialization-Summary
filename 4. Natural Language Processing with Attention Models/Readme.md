@@ -1,3 +1,7 @@
+# Course 4: Natural Language Processing with Attention Models
+This is the last course of the Natural Language Processing specialization at [Coursera](https://www.coursera.org/programs/educational-flag-learning-program-0tkxi?currentTab=MY_COURSES&productId=_U5cASTxEemuhAoKFebZeA&productType=s12n&showMiniModal=true) which is moderated by [DeepLearning.ai](http://deeplearning.ai/).
+
+## Table of contents
 * [Course 4: Natural Language Processing with Attention Models](#Course-4-Natural-Language-Processing-with-Attention-Models)
    
   * [Week 1: Neural Machine Translation (NMT)](#Week-1-Neural-Machine-Translation-(NMT))
@@ -22,8 +26,6 @@
     * [Evaluation for Machine Translation](#Evaluation-for-Machine-Translation)
       * [BLEU Score](#BLEU-Score)
       * [ROUGE Score](#ROUGE-Score)
-    
-# Course 4: Natural Language Processing with Attention Models
 
 ## Week 1: Neural Machine Translation (NMT)
 
