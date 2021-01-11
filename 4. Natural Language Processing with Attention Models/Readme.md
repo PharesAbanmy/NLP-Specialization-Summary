@@ -1,6 +1,6 @@
-* [Course 4: Natural Language Processing with Attention Models](#Course-4:-Natural-Language-Processing-with-Attention-Models)
+* [Course 4: Natural Language Processing with Attention Models](#Course-4-Natural-Language-Processing-with-Attention-Models)
    
-  * [Week 1: Neural Machine Translation (NMT)](#Week-1:-Neural-Machine-Translation-(NMT))
+  * [Week 1: Neural Machine Translation (NMT)](#Week-1-Neural-Machine-Translation-(NMT))
     * [Seq2seq (Google 2014)](#Seq2seq-(Google-2014))
       * [Intuition](#Intuition)
       * [Problems](#Problems)
