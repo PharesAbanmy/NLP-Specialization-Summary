@@ -1,14 +1,16 @@
 # Course 3: Natural Language Processing with Sequence Models
+This is the last course of the Natural Language Processing specialization at [Coursera](https://www.coursera.org/programs/educational-flag-learning-program-0tkxi?currentTab=MY_COURSES&productId=_U5cASTxEemuhAoKFebZeA&productType=s12n&showMiniModal=true) which is moderated by [DeepLearning.ai](http://deeplearning.ai/).
 
-* [Course 3: Natural Language Processing with Sequence Models](#course-3:-natural-language-processing-with-sequence-models)
+## Table of contents
+* [Course 3: Natural Language Processing with Sequence Models](#course-3-natural-language-processing-with-sequence-models)
    
-   * [Week 2: Traditional Language models](#week-2:-traditional-language-models)
+   * [Week 2: Traditional Language models](#week-2-traditional-language-models)
       * [Recurrent Neural Networks](#recurrent-neural-networks)
       * [Gated Recurrent Units](#gated-recurrent-units)
       * [Bi-directional RNNs](#bi-directional-rnns)
       * [Deep RNNs](#deep-rnns)
    
-   * [Week 3: LSTMs and Named Entity Recognition](#week-3:-part-of-speech-tagging-and-hidden-markov-models)
+   * [Week 3: LSTMs and Named Entity Recognition](#week-3-part-of-speech-tagging-and-hidden-markov-models)
       * [RNNs Advantages and Disadvantages](#rnns-advantages-and-disadvantages)
           * [Vanishing / Exploding gradients problem](#vanishing-/-exploding-gradients-problem)
           * [Solutions)](#solutions)
@@ -18,7 +20,7 @@
       * [Name Entity Recognition](#name-entity-recognition)
           * [Processing data)](#processing-data)
           * [Training the NER)](#training-the-ner)
-    * [Week 4: Siamese Network](#week-4:-siamese-network)
+    * [Week 4: Siamese Network](#week-4-siamese-network)
       * [Siamese Networks](#siamese-networks)
           * [Applications)](#applications)
           * [Model Architecture](#model-architecture)
