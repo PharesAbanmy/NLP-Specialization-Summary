@@ -211,11 +211,11 @@ This is the last course of the Natural Language Processing specialization at [Co
 
 ### Self-attention
 - An intention model that incorporates a dense layer for every input: **queries**, **keys**, and **values** which allows the inputs to interact with each other ("Self") and find out who they should pay more attention to ("attention").
-- ![](images/12.png)
+- ![](images/11.png)
 
 ### Multi-headed attention
 - Parallel self-attention layers ("heads") that concatenated to produce a single output.
-- ![](images/13.png)
+- ![](images/12.png)
 
 ### Dot-Product Attention
 - Input vectors are called **keys**
@@ -225,12 +225,12 @@ This is the last course of the Natural Language Processing specialization at [Co
 - **Dot-product Attention** is essential for Transformers.
 - The input to Attention are **queries**, **keys** and **values**.
 #### Attention formula
-- ![](images/14.png)
+- ![](images/13.png)
 - Note: This is one of the **score functions**; the one that the paper used is **"Scaled Scaled Dot-Product Attention"** which the only difference is dividing by the square root of the dimension of the key vectors which leads to more stable gradients.
 
 #### Multi-Head Attention formula
+- ![](images/14.png)
 - ![](images/15.png)
-- ![](images/16.png)
 
 ### Transformer Decoder
 1. Input Embeddings: Trains a word to vector embedding.
@@ -249,7 +249,7 @@ This is the last course of the Natural Language Processing specialization at [Co
 
 #### Feature-based
 - Taking high level features like (word embeddings) as features for your model.
-- ![](images/17.png)
+- ![](images/16.png)
 
 #### Fine-Tuning
 - Using the pre-trained model weights and fine tune it for different tasks.
