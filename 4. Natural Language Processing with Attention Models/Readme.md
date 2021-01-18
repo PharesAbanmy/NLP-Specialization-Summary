@@ -94,7 +94,7 @@ This is the last course of the Natural Language Processing specialization at [Co
   + Step 3: Multiply each encoder hidden state by its softmaxed score to obtain the alignment vector.
   + Step 4: Sum up the alignment vectors to produce the context vector.
   + Step 5: Feed the context vector into the decoder.
-- ![](images/04png)
+- ![](images/04.png)
 #### Intuition
 1- A translator reads the German text while writing down the keywords from the start till the end.
 2- he starts translating to English. While translating each German word, he makes use of the keywords he has written down.
@@ -102,14 +102,14 @@ This is the last course of the Natural Language Processing specialization at [Co
 ### Attention: Examples
 
 #### eq2seq with bidirectional encoder + attention - Bahdanau et. Al (2015)
-- ![](images/05png)
+- ![](images/05.png)
 ##### Intuition
 1- Translator A reads the German text while writing down the keywords.
 2- Translator B (who is more senior than Translator A) reads the same German text from the last word to the first.
 3- two regularly discuss about every word they read thus far. Once done reading this German text, Translator B is then tasked to translate the German sentence to English word by word, based on the discussion and the consolidated keywords that the both of them have picked up.
 
 #### seq2seq with 2-layer stacked encoder + attention - Luong et. Al (2015)
-- ![](images/06png)
+- ![](images/06.png)
 ##### Intuition
 1- Translator A reads the German text while writing down the keywords.
 2- Translator B (who is more senior than Translator A) also reads the same German text.
@@ -117,7 +117,7 @@ This is the last course of the Natural Language Processing specialization at [Co
 4- Once done reading, the both of them translate the sentence to English together word by word, based on the consolidated keywords.
 
 #### seq2seq with 8-stacked encoder (+bidirection+residual connections) + attention - Google’s Neural Machine Translation (GNMT)
-- ![](images/07png)
+- ![](images/07.png)
 ##### Intuition
 1- 8 translators sit in a column from bottom to top.
 2- Starting with Translator A, B, …, H. Every translator reads the same German text.
@@ -127,7 +127,7 @@ This is the last course of the Natural Language Processing specialization at [Co
 6- Translator H then writes the first translation word, based on the keywords he wrote and the answers he got. Repeat this until we get the translation out.
 
 ### Score Functions
-- ![](images/08png)
+- ![](images/08.png)
 
 ### Training an NMT with Attention
 
@@ -149,13 +149,13 @@ This is the last course of the Natural Language Processing specialization at [Co
   + The second select uses the **mask** to take (activations or 0) and the second copy of the target tokens, these are the true target which the **decoder** needs to compare.
   + Run everything through a **dense layer** with target vocab size.
   + Run the dense layer output through **LogSoftmax** which transforms the attention weights to distributions to compare it with the true target.
-- ![](images/09png)
+- ![](images/09.png)
 
 ### Evaluation for Machine Translation
 
 #### BLEU Score (Bilingual Evaluation Understudy) 
 - Evaluates the quality of the machine-translated text by comparing “candidates” to one or more “reference” translations.
-- ![](images/10png)
+- ![](images/10.png)
 - Note: BLEU doesn’t consider meaning or structure.
 
 #### ROUGE Score (Recall-Oriented Understudy for Gisting Evaluation)
@@ -204,18 +204,18 @@ This is the last course of the Natural Language Processing specialization at [Co
 - **BERT (Bidirectional Encoder Representation from Transformers)** –  Devlin, J (2018) Goolge AI Language.
 - **T5 (Text-to-Text Transfer Transformer)** –  Colin, R Goolgle (2019).
    + A powerful multi-task transformer.
-   + ![](images/11png)
+   + ![](images/11.png)
    
 ### Positional Encoding
 - Used to retain the positional information of the input sequence by adding values to the embeddings.
 
 ### Self-attention
 - An intention model that incorporates a dense layer for every input: **queries**, **keys**, and **values** which allows the inputs to interact with each other ("Self") and find out who they should pay more attention to ("attention").
-- ![](images/12png)
+- ![](images/12.png)
 
 ### Multi-headed attention
 - Parallel self-attention layers ("heads") that concatenated to produce a single output.
-- ![](images/13png)
+- ![](images/13.png)
 
 ### Dot-Product Attention
 - Input vectors are called **keys**
@@ -225,12 +225,12 @@ This is the last course of the Natural Language Processing specialization at [Co
 - **Dot-product Attention** is essential for Transformers.
 - The input to Attention are **queries**, **keys** and **values**.
 #### Attention formula
-- ![](images/14png)
+- ![](images/14.png)
 - Note: This is one of the **score functions**; the one that the paper used is **"Scaled Scaled Dot-Product Attention"** which the only difference is dividing by the square root of the dimension of the key vectors which leads to more stable gradients.
 
 #### Multi-Head Attention formula
-- ![](images/15png)
-- ![](images/16png)
+- ![](images/15.png)
+- ![](images/16.png)
 
 ### Transformer Decoder
 1. Input Embeddings: Trains a word to vector embedding.
@@ -249,14 +249,14 @@ This is the last course of the Natural Language Processing specialization at [Co
 
 #### Feature-based
 - Taking high level features like (word embeddings) as features for your model.
-- ![](images/17png)
+- ![](images/17.png)
 
 #### Fine-Tuning
 - Using the pre-trained model weights and fine tune it for different tasks.
-- ![](images/18png)
+- ![](images/18.png)
 
 ### NLP History Summary
-- ![](images/19png)
+- ![](images/19.png)
 
 ### BERT
 - A multi layer bidirectional transformers that makes use of transfer learning/pre-training.
@@ -267,10 +267,10 @@ This is the last course of the Natural Language Processing specialization at [Co
 - 110 million parameters
 
 #### BERT Input
-- ![](images/20png)
+- ![](images/20.png)
 
 #### BERT Output visualization
-- ![](images/21png)
+- ![](images/21.png)
 
 ### T5 (Text-to-Text Transfer Transformers)
 - T5 is an extremely large new neural network model that is trained on a mixture of unlabeled text from **C4 (Colossal Clean Crawled Corpus)** data set and labeled data from popular NLP tasks, then fine-tuned individually for each of the tasks.
@@ -281,7 +281,7 @@ This is the last course of the Natural Language Processing specialization at [Co
 
 #### C4 (Colossal Clean Crawled Corpus)
 - A colossal, cleaned version of Common Crawl's web crawl corpus that is obtained by scraping web pages and ignoring the markup from the HTML.
-- ![](images/22png)
+- ![](images/22.png)
 
 #### GLUE Benchmark
 - A benchmark of nine different language comprehension tasks, a data set and a platform for evaluating and comparing the models.
@@ -307,7 +307,7 @@ This is the last course of the Natural Language Processing specialization at [Co
 
 - This means that just the input for the model is already 2GB in size. On a 16 gigabyte GPU, and you haven't even touched the layers yet, a transformer has two types of layers, attention layers an feedforward layers; A model might have 12 of each type of layer. In this case the activations would use around 50 GB of memory.
 
-- ![](images/23png)
+- ![](images/23.png)
 
 - And to do back-propagation through this model, the forward path will need to store some intermediate quantities in memory, this is the first fundamental efficiency challenge.
 
@@ -316,13 +316,13 @@ This is the last course of the Natural Language Processing specialization at [Co
 ### Reversible Residual Layers
 - The key idea is that you start with two copies of the model inputs, then at each layer you only update one of them. The activations that you don't update will be the ones used to compute the residuals.
 
-- ![](images/24png)
+- ![](images/24.png)
 
 - The activations in the model are now twice as big, but you don't have to worry about caching for the backwards pass.
 
 - First you find Y_1, then you use that to find Y_2. That's a forward pass for irreversible residual block. It's combined standard attention and feedforward residual layers from a regular transformer into a single reversible residual block, and there is nothing to be saved in memory except the Y_1 and Y_2 of the output layer instead of activations for every individual layer.
 
-- ![](images/25png)
+- ![](images/25.png)
 
 ### Reformer
 - Reformer is a transformer model designed to be memory efficient so it can handle very large context windows of upto 1 million words.
