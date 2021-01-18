@@ -56,7 +56,7 @@ This is the last course of the Natural Language Processing specialization at [Co
          * [BERT Input](#BERT Input)
          * [BERT Output Visualization](#BERT Output Visualization)
       * [T5 (Text-to-Text Transfer Transformers)](#T5 (Text-to-Text Transfer Transformers))
-         * [C4 (Colossal Clean Crawled Corpus)](#C4-(Colossal-Clean-Crawled-Corpus))
+         * [C4 (Colossal Clean Crawled Corpus)](#c4-(colossal-clean-crawled-corpus))
          * [GLUE Benchmark](#GLUE-Benchmark)
          * [Gradual unfreezing](#Gradual-unfreezing)
 
