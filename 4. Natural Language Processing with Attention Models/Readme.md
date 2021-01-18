@@ -26,6 +26,39 @@ This is the last course of the Natural Language Processing specialization at [Co
     * [Evaluation for Machine Translation](#Evaluation-for-Machine-Translation)
       * [BLEU Score](#BLEU-Score)
       * [ROUGE Score](#ROUGE-Score)
+      * [Sampling and Decoding](#Sampling-and-Decoding)
+         * [Greedy decoding](#Greedy-decoding)
+         * [Random sampling](#Random-sampling)
+         * [beam search](#beam-search)
+         * [Minimum Bayes Risk (MBR)](#Minimum-Bayes-Risk-(MBR))
+   * [Week 2: Transformers](#Week-2-Transformers)
+      * [Transformers vs RNNs](#Transformers vs RNNs)
+         * [RNNs Disadvantages](#RNNs Disadvantages)
+         * [Transformers NLP Applications](#Transformers NLP Applications)
+      * [State of the Art Transformers](#State of the Art Transformers)
+         * [GPT-2](#GPT-2)
+         * [BERT](#BERT)
+         * [T5](#T5)
+      * [Positional Encoding](#Positional Encoding)
+      * [Self-attention](#Self-attention)
+      * [Multi-headed attention](#Multi-headed attention)
+      * [Dot-Product Attention](#Dot-Product Attention)
+         * [Attention formula](#Attention formula)
+         * [Multi-Head Attention formula](#Multi-Head Attention formula)
+      * [Transformer Decoder](#Transformer Decoder)
+   * [Week 3: Transfer Learning](#Week 3: Transfer Learning)
+      * [Transfer Learning](#Transfer Learning)
+         * [Feature-based](#Feature-based)
+         * [Fine-Tuning](#Fine-Tuning)
+      * [NLP History Summary](#NLP History Summary)
+      * [BERT](#BERT)
+         * [BERT_base architecture](#BERT_base architecture)
+         * [BERT Input](#BERT Input)
+         * [BERT Output Visualization](#BERT Output Visualization)
+      * [T5 (Text-to-Text Transfer Transformers)](#T5 (Text-to-Text Transfer Transformers))
+         * [C4 (Colossal Clean Crawled Corpus)](#C4-(Colossal-Clean-Crawled-Corpus))
+         * [GLUE Benchmark](#GLUE-Benchmark)
+         * [Gradual unfreezing](#Gradual-unfreezing)
 
 ## Week 1: Neural Machine Translation (NMT)
 
@@ -127,3 +160,171 @@ This is the last course of the Natural Language Processing specialization at [Co
 
 #### ROUGE Score (Recall-Oriented Understudy for Gisting Evaluation)
 - Measures **precision** and **recall** between generated text and human-created text.
+
+### Sampling and Decoding
+- After all the necessary calculations have been performed on the encoder hidden states, and your model is ready to predict the next token, how will you choose to do it?
+
+#### Greedy decoding
+- Select the most probable word at every step.
+
+#### Random sampling
+- Provide probabilities for each word, and sample accordingly for the next outputs.
+
+#### beam search
+- Selects multiple options based on conditional probability.
+- Parameter B is the limit of the number of branching paths (options).
+
+#### Minimum Bayes Risk (MBR)
+- Begin by generating several random samples.
+- Then compare each sample against all its mates.
+- Assign similarity score for each comparison.
+
+## Week 2: Transformers
+
+### Transformers vs RNNs
+- Transformers differs from seq2seq by using multi-head attention layers instead of recurrent layers.
+
+#### RNNs Disadvantages
+- Parallel computing is difficult to implement.
+- Loss of information if the sequence is long.
+- Vanishing gradient problem.
+
+#### Transformers
+- Transformers are models specially designed to tackle some of the problems.
+
+##### Transformers NLP Applications
+- Text Summarization
+- Auto-Complete
+- Named entity recognition (NER)
+- Question Answering (Q&A)
+- ...
+
+#### State of the Art Transformers
+- **GPT-2: Generative Pre-traning for Transformer** - Radford, A Open AI (2018).
+- **BERT (Bidirectional Encoder Representation from Transformers)** –  Devlin, J (2018) Goolge AI Language.
+- **T5 (Text-to-Text Transfer Transformer)** –  Colin, R Goolgle (2019).
+   + A powerful multi-task transformer.
+   + ![](images/11png)
+   
+### Positional Encoding
+- Used to retain the positional information of the input sequence by adding values to the embeddings.
+
+### Self-attention
+- An intention model that incorporates a dense layer for every input: **queries**, **keys**, and **values** which allows the inputs to interact with each other ("Self") and find out who they should pay more attention to ("attention").
+- ![](images/12png)
+
+### Multi-headed attention
+- Parallel self-attention layers ("heads") that concatenated to produce a single output.
+- ![](images/13png)
+
+### Dot-Product Attention
+- Input vectors are called **keys**
+- Target vectors are called **queries**
+- Each query is compared with all keys, and each key gets a probability.
+- The **queries** by **keys** matrix is called **attention weights** which tells us how much each key is similar to each query.
+- **Dot-product Attention** is essential for Transformers.
+- The input to Attention are **queries**, **keys** and **values**.
+#### Attention formula
+- ![](images/14png)
+- Note: This is one of the **score functions**; the one that the paper used is **"Scaled Scaled Dot-Product Attention"** which the only difference is dividing by the square root of the dimension of the key vectors which leads to more stable gradients.
+
+#### Multi-Head Attention formula
+- ![](images/15png)
+- ![](images/16png)
+
+### Transformer Decoder
+1. Input Embeddings: Trains a word to vector embedding.
+2. Positional Encoding: Trains vectors to retain positional information.
+3. N Decoder Blocks
+   a. Multi-Head Attention Layer: Process each vector to help identify relationships.
+   b. Norm Layer: Takes each Self-Attention through a residual connection and the Multi-Head Attention output and normalize it to speed up the training and reduce the overall processing time.
+   c. Feed-Forward Layer: Embeddings are fed into a fully connected neural network with ReLU activation.
+   d. Norm Layer
+4. Linear Layer: simple fully connected neural network that projects the vector produced by the stack of decoders, into a much, much larger vector called a logits vector.
+5. SoftMax Layer: Turns the logits vector into probabilities.
+
+## Week 3: Transfer Learning
+
+### Transfer Learning
+
+#### Feature-based
+- Taking high level features like (word embeddings) as features for your model.
+- ![](images/17png)
+
+#### Fine-Tuning
+- Using the pre-trained model weights and fine tune it for different tasks.
+- ![](images/18png)
+
+### NLP History Summary
+- ![](images/19png)
+
+### BERT
+- A multi layer bidirectional transformers that makes use of transfer learning/pre-training.
+
+#### BERT_base architecture
+- 12 layers (Transformers blocks)
+- 12 attention heads
+- 110 million parameters
+
+#### BERT Input
+- ![](images/20png)
+
+#### BERT Output visualization
+- ![](images/21png)
+
+### T5 (Text-to-Text Transfer Transformers)
+- T5 is an extremely large new neural network model that is trained on a mixture of unlabeled text from **C4 (Colossal Clean Crawled Corpus)** data set and labeled data from popular NLP tasks, then fine-tuned individually for each of the tasks.
+
+- T5 represents the latest in a sequence of five or ten papers from the last couple of years on the same basic idea: **Training large neural networks on large amounts of unlabeled text, then fine- tuning them on labeled text for specific tasks**.
+
+- The largest model (11 billion parameters) achieved state-of-the-art on many benchmarks such as **GLUE** and **SuperGLUE** benchmarks
+
+#### C4 (Colossal Clean Crawled Corpus)
+- A colossal, cleaned version of Common Crawl's web crawl corpus that is obtained by scraping web pages and ignoring the markup from the HTML.
+- ![](images/22png)
+
+#### GLUE Benchmark
+- A benchmark of nine different language comprehension tasks, a data set and a platform for evaluating and comparing the models.
+
+#### Gradual unfreezing
+- For the first epoch, freeze all layers except the last layer then only fine-tune the last layer, then unfreeze the last frozen layer then fine-tune it; and so on.
+
+## Week 4: Complexity
+
+### Transformer Complexity
+- Attention on a sequence of length L, takes L squared time and memory.
+- The more layers a model has, the more memory it needs.
+
+### LSH (Locality Sensitive Hashing) Attention
+- Locality Sensitive Hashing can reduce the computational costs of attention using LSH Attention.
+   1- Hash Q and K
+   2- Standard attention within same-hash bins.
+   3- Repeat a few times to increase probability of key in the same bin.
+- LSH Attention take advantage of parallel computing by chunking the LSH buckets.
+
+### Memory Efficiency
+- If you want to run a transformer over the entire text of a book, you might have around 1 million tokens to process, and each of these tokens will have an associated feature vector of some size, for example, 512.
+
+- This means that just the input for the model is already 2GB in size. On a 16 gigabyte GPU, and you haven't even touched the layers yet, a transformer has two types of layers, attention layers an feedforward layers; A model might have 12 of each type of layer. In this case the activations would use around 50 GB of memory.
+
+- ![](images/23png)
+
+- And to do back-propagation through this model, the forward path will need to store some intermediate quantities in memory, this is the first fundamental efficiency challenge.
+
+- Memory usage grows linearly with the number of layers, so there's no way to scale to the million token regime. Fortunately, the **Reversible Residual Layers** solved this problem.
+
+### Reversible Residual Layers
+- The key idea is that you start with two copies of the model inputs, then at each layer you only update one of them. The activations that you don't update will be the ones used to compute the residuals.
+
+- ![](images/24png)
+
+- The activations in the model are now twice as big, but you don't have to worry about caching for the backwards pass.
+
+- First you find Y_1, then you use that to find Y_2. That's a forward pass for irreversible residual block. It's combined standard attention and feedforward residual layers from a regular transformer into a single reversible residual block, and there is nothing to be saved in memory except the Y_1 and Y_2 of the output layer instead of activations for every individual layer.
+
+- ![](images/25png)
+
+### Reformer
+- Reformer is a transformer model designed to be memory efficient so it can handle very large context windows of upto 1 million words.
+   + It uses LSH Attention to reduce the complexity of attending over long sequences.
+   + it uses Reversible Residual Layers to more efficiently use the memory available.
