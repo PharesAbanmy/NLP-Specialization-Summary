@@ -86,6 +86,7 @@ add log to fix it.
 - KNN can search for the K nearest neighbors from the computed vector XR.
 - Thus searching in the whole space can be slow, using a hash tables can minimize yoursearch space.
 - Hash tables and hash functions
+    - Hashing is the transformation of a string of characters into a usually shorter fixed-length value or key that represents.
     - A simple hash function: Hash Value = vector % number of buckets.
     - ![](images/09.png)
 - Locality Sensitive Hashing: Separate the space using hyperplanes.
