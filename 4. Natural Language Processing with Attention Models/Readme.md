@@ -211,11 +211,11 @@ This is the last course of the Natural Language Processing specialization at [Co
 
 ### Self-attention
 - An intention model that incorporates a dense layer for every input: **queries**, **keys**, and **values** which allows the inputs to interact with each other ("Self") and find out who they should pay more attention to ("attention").
-- ![](images/11.png)
+- ![](images/12.png)
 
 ### Multi-headed attention
 - Parallel self-attention layers ("heads") that concatenated to produce a single output.
-- ![](images/12.png)
+- ![](images/13.png)
 
 ### Dot-Product Attention
 - Input vectors are called **keys**
@@ -225,12 +225,12 @@ This is the last course of the Natural Language Processing specialization at [Co
 - **Dot-product Attention** is essential for Transformers.
 - The input to Attention are **queries**, **keys** and **values**.
 #### Attention formula
-- ![](images/13.png)
+- ![](images/14.png)
 - Note: This is one of the **score functions**; the one that the paper used is **"Scaled Scaled Dot-Product Attention"** which the only difference is dividing by the square root of the dimension of the key vectors which leads to more stable gradients.
 
 #### Multi-Head Attention formula
-- ![](images/14.png)
 - ![](images/15.png)
+- ![](images/16.png)
 
 ### Transformer Decoder
 1. Input Embeddings: Trains a word to vector embedding.
@@ -249,14 +249,14 @@ This is the last course of the Natural Language Processing specialization at [Co
 
 #### Feature-based
 - Taking high level features like (word embeddings) as features for your model.
-- ![](images/16.png)
+- ![](images/17.png)
 
 #### Fine-Tuning
 - Using the pre-trained model weights and fine tune it for different tasks.
-- ![](images/17.png)
+- ![](images/18.png)
 
 ### NLP History Summary
-- ![](images/18.png)
+- ![](images/19.png)
 
 ### BERT
 - A multi layer bidirectional transformers that makes use of transfer learning/pre-training.
@@ -267,10 +267,10 @@ This is the last course of the Natural Language Processing specialization at [Co
 - 110 million parameters
 
 #### BERT Input
-- ![](images/19.png)
+- ![](images/20.png)
 
 #### BERT Output visualization
-- ![](images/20.png)
+- ![](images/21.png)
 
 ### T5 (Text-to-Text Transfer Transformers)
 - T5 is an extremely large new neural network model that is trained on a mixture of unlabeled text from **C4 (Colossal Clean Crawled Corpus)** data set and labeled data from popular NLP tasks, then fine-tuned individually for each of the tasks.
@@ -281,7 +281,7 @@ This is the last course of the Natural Language Processing specialization at [Co
 
 #### C4 (Colossal Clean Crawled Corpus)
 - A colossal, cleaned version of Common Crawl's web crawl corpus that is obtained by scraping web pages and ignoring the markup from the HTML.
-- ![](images/21.png)
+- ![](images/22.png)
 
 #### GLUE Benchmark
 - A benchmark of nine different language comprehension tasks, a data set and a platform for evaluating and comparing the models.
@@ -307,7 +307,7 @@ This is the last course of the Natural Language Processing specialization at [Co
 
 - This means that just the input for the model is already 2GB in size. On a 16 gigabyte GPU, and you haven't even touched the layers yet, a transformer has two types of layers, attention layers an feedforward layers; A model might have 12 of each type of layer. In this case the activations would use around 50 GB of memory.
 
-- ![](images/22.png)
+- ![](images/23.png)
 
 - And to do back-propagation through this model, the forward path will need to store some intermediate quantities in memory, this is the first fundamental efficiency challenge.
 
@@ -316,13 +316,13 @@ This is the last course of the Natural Language Processing specialization at [Co
 ### Reversible Residual Layers
 - The key idea is that you start with two copies of the model inputs, then at each layer you only update one of them. The activations that you don't update will be the ones used to compute the residuals.
 
-- ![](images/23.png)
+- ![](images/24.png)
 
 - The activations in the model are now twice as big, but you don't have to worry about caching for the backwards pass.
 
 - First you find Y_1, then you use that to find Y_2. That's a forward pass for irreversible residual block. It's combined standard attention and feedforward residual layers from a regular transformer into a single reversible residual block, and there is nothing to be saved in memory except the Y_1 and Y_2 of the output layer instead of activations for every individual layer.
 
-- ![](images/24.png)
+- ![](images/25.png)
 
 ### Reformer
 - Reformer is a transformer model designed to be memory efficient so it can handle very large context windows of upto 1 million words.
