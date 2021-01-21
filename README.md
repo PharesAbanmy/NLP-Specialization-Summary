@@ -13,3 +13,5 @@ This is by far the best course series on NLP that I've taken. Enjoy!
 ## About This Specialization (From the official Deep Learning Specialization page)
 
 > Natural Language Processing (NLP) uses algorithms to understand and manipulate human language. This technology is one of the most broadly applied areas of machine learning. As AI continues to expand, so will the demand for professionals skilled at building models that analyze speech and language, uncover contextual patterns, and produce insights from text and audio.
+
+![](Certificate.png)
