@@ -65,8 +65,8 @@ This is the last course of the Natural Language Processing specialization at [Co
 ### Seq2seq (Google 2014)
 
 #### Intuition
-1- A translator reads the German text from start till the end.
-2- Once done, he starts translating to English word by word.
+1. A translator reads the German text from start till the end.
+2. Once done, he starts translating to English word by word.
 
 #### Problems
 - The last tokens of the sequences are given more importance.
@@ -96,35 +96,35 @@ This is the last course of the Natural Language Processing specialization at [Co
   + Step 5: Feed the context vector into the decoder.
 - ![](images/04.png)
 #### Intuition
-1- A translator reads the German text while writing down the keywords from the start till the end.
-2- he starts translating to English. While translating each German word, he makes use of the keywords he has written down.
+1. A translator reads the German text while writing down the keywords from the start till the end.
+2. he starts translating to English. While translating each German word, he makes use of the keywords he has written down.
   
 ### Attention: Examples
 
 #### eq2seq with bidirectional encoder + attention - Bahdanau et. Al (2015)
 - ![](images/05.png)
 ##### Intuition
-1- Translator A reads the German text while writing down the keywords.
-2- Translator B (who is more senior than Translator A) reads the same German text from the last word to the first.
-3- two regularly discuss about every word they read thus far. Once done reading this German text, Translator B is then tasked to translate the German sentence to English word by word, based on the discussion and the consolidated keywords that the both of them have picked up.
+1. Translator A reads the German text while writing down the keywords.
+2. Translator B (who is more senior than Translator A) reads the same German text from the last word to the first.
+3. two regularly discuss about every word they read thus far. Once done reading this German text, Translator B is then tasked to translate the German sentence to English word by word, based on the discussion and the consolidated keywords that the both of them have picked up.
 
 #### seq2seq with 2-layer stacked encoder + attention - Luong et. Al (2015)
 - ![](images/06.png)
 ##### Intuition
-1- Translator A reads the German text while writing down the keywords.
-2- Translator B (who is more senior than Translator A) also reads the same German text.
-3- Junior Translator A has to report to Translator B at every word they read.
-4- Once done reading, the both of them translate the sentence to English together word by word, based on the consolidated keywords.
+1. Translator A reads the German text while writing down the keywords.
+2. Translator B (who is more senior than Translator A) also reads the same German text.
+3. Junior Translator A has to report to Translator B at every word they read.
+4. Once done reading, the both of them translate the sentence to English together word by word, based on the consolidated keywords.
 
 #### seq2seq with 8-stacked encoder (+bidirection+residual connections) + attention - Google’s Neural Machine Translation (GNMT)
 - ![](images/07.png)
 ##### Intuition
-1- 8 translators sit in a column from bottom to top.
-2- Starting with Translator A, B, …, H. Every translator reads the same German text.
-3- At every word, Translator A shares his findings with Translator B, who will improve it and share it with Translator C — repeat until Translator H.
-4- Translator H writes down the relevant keywords based on what he knows and the information he has received.
-5- Once everyone is done reading this English text, Translator A is told to translate the first word. First, he tries to recall, then he shares his answer with Translator B, who improves the answer and shares with Translator C — repeat until Translator H.
-6- Translator H then writes the first translation word, based on the keywords he wrote and the answers he got. Repeat this until we get the translation out.
+1. 8 translators sit in a column from bottom to top.
+2. Starting with Translator A, B, …, H. Every translator reads the same German text.
+3. At every word, Translator A shares his findings with Translator B, who will improve it and share it with Translator C — repeat until Translator H.
+4. Translator H writes down the relevant keywords based on what he knows and the information he has received.
+5. Once everyone is done reading this English text, Translator A is told to translate the first word. First, he tries to recall, then he shares his answer with Translator B, who improves the answer and shares with Translator C — repeat until Translator H.
+6. Translator H then writes the first translation word, based on the keywords he wrote and the answers he got. Repeat this until we get the translation out.
 
 ### Score Functions
 - ![](images/08.png)
