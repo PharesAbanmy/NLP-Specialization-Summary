@@ -1,4 +1,4 @@
-# Course 1: Course 2: Natural Language Processing with Probabilistic Model
+Course 2: Natural Language Processing with Probabilistic Model
 This is the second course of the Natural Language Processing specialization at [Coursera](https://www.coursera.org/programs/educational-flag-learning-program-0tkxi?currentTab=MY_COURSES&productId=_U5cASTxEemuhAoKFebZeA&productType=s12n&showMiniModal=true) which is moderated by [DeepLearning.ai](http://deeplearning.ai/).
 
 ## Table of contents
