@@ -40,7 +40,7 @@ This is the third course of the Natural Language Processing specialization at [C
     	+ Many to Many
     
 ### Gated Recurrent Units
-- Relevance ‘r’ and update ‘ r ’ and update ‘ and update ‘r’ and update ‘ u ’ and update ‘ gates to remember important prior information.
+- GRUs computes relevance 'r' and update 'u' gates to remember important prior information.
 - ![](images/03.png)
 - ![](images/04.png)
 
